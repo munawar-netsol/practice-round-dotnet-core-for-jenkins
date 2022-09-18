@@ -9,9 +9,6 @@ pipeline {
 						sh 'dotnet build TeacherService/TeacherService.csproj'
 					}
 					
-					steps {
-						sh 'dotnet build TeacherService/StudentService.csproj'
-					}
 				}
 			}
 		}
