@@ -11,6 +11,11 @@ pipeline {
 					}
 					
 				}
+				stage('Unit Testing') {
+					steps {
+						sh 'dotnet test'
+					}
+				}
 			}
 		}
 	}
