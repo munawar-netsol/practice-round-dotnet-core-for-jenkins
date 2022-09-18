@@ -4,7 +4,7 @@ pipeline {
 	{            
 		stage('Four') {
 			parallel {
-				stage('Unit Testing') {
+				stage('Code Build') {
 					steps {
 						sh 'dotnet build TeacherService/TeacherService.csproj'
 						sh 'dotnet build StudentService/StudentService.csproj'
