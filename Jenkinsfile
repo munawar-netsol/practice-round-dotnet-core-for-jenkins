@@ -1,9 +1,9 @@
 pipeline {
-	agent any {
+	agent {
 		stages {
 			stage('Build') {
 				steps {
-					echo 'ehyyyyyyyyyyyyyyyyyy'
+					sh 'dotnet build TeacherService/TeacherService.csproj'
 				}
 			}
 		}
