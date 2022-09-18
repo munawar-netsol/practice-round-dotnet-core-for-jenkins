@@ -6,12 +6,12 @@ pipeline {
 			parallel {
 				stage('Unit Testing') {
 					steps {
-						echo 'Running the unit Testing!'
+						sh 'dotnet build TeacherService/TeacherService.csproj'
 					}
 				}
-				stage('Integration Testing') {					
+				stage('Unit Testing') {
 					steps {
-						echo 'Running the Integration Testing!'
+						sh 'dotnet build TeacherService/StudentService.csproj'
 					}
 				}
 			}
