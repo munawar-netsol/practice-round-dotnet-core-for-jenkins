@@ -1,10 +1,17 @@
 pipeline {
-    agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'mvn --version'
-            }
-        }
-    }
+	agent any
+	stages {
+		stage ('build') {			
+	input{
+		message "Press Ok to continue"
+		submitter "user1,user2"
+		parameters {
+			string(name:'username', defaultValue: 'user', description: 'Username of the user pressing Ok')
+		}
+	}
+	steps { 
+		echo "User: ${username} said Ok."
+	}
+		}
+	}
 }
