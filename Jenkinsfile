@@ -9,12 +9,7 @@ pipeline {
 						echo 'Running the unit Testing!'
 					}
 				}
-				stage('Integration Testing') {
-					agent {
-						dockerfile {
-							filename 'Dockerfile'
-						}
-					}
+				stage('Integration Testing') {					
 					steps {
 						echo 'Running the Integration Testing!'
 					}
