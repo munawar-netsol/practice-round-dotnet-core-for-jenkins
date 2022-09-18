@@ -8,8 +8,7 @@ pipeline {
 					steps {
 						sh 'dotnet build TeacherService/TeacherService.csproj'
 					}
-				}
-				stage('Unit Testing') {
+					
 					steps {
 						sh 'dotnet build TeacherService/StudentService.csproj'
 					}
