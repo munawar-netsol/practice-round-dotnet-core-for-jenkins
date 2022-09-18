@@ -13,7 +13,8 @@ pipeline {
 				}
 				stage('Unit Testing') {
 					steps {
-						sh 'dotnet test'
+						sh 'dotnet test StudentService'
+						sh 'dotnet test TeacherService'
 					}
 				}
 			}
