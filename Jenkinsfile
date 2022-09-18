@@ -7,6 +7,7 @@ pipeline {
 				stage('Unit Testing') {
 					steps {
 						sh 'dotnet build TeacherService/TeacherService.csproj'
+						sh 'dotnet build StudentService/StudentService.csproj'
 					}
 					
 				}
